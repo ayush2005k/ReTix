@@ -1,0 +1,361 @@
+/* 1. Global Reset & Typography */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-orange: #FF6A35;
+    --primary-hover: #e55a2a;
+    --bg-light: #F9FAFB;
+    --text-dark: #111827;
+    --text-gray: #6B7280;
+    --border-color: #E5E7EB;
+    --white: #ffffff;
+    --success: #10B981;
+    --pending: #F59E0B;
+    --danger: #EF4444;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 2. Header & Navigation */
+header {
+    background: var(--white);
+    padding: 15px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-gray);
+    margin: 0 15px;
+    font-weight: 500;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-orange);
+}
+
+.nav-links a.active {
+    color: var(--primary-orange);
+    background: #FFF0EB;
+    padding: 8px 16px;
+    border-radius: 20px;
+}
+
+/* 3. Buttons */
+.btn-signup {
+    background: var(--primary-orange);
+    color: var(--white);
+    padding: 10px 24px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-signup:hover {
+    background: var(--primary-hover);
+}
+
+.upload-btn {
+    background: var(--white);
+    border: 1px solid #D1D5DB;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #4B5563;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.upload-btn:hover {
+    background: #F9FAFB;
+    border-color: #9CA3AF;
+}
+
+/* 4. Hero Section & Search */
+.hero {
+    text-align: center;
+    padding: 80px 20px 40px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.hero h1 span {
+    color: var(--primary-orange);
+}
+
+.search-container {
+    background: var(--white);
+    max-width: 900px;
+    margin: 0 auto 40px;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.search-input {
+    border: 1px solid var(--border-color);
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.search-input:focus {
+    border-color: var(--primary-orange);
+}
+
+/* 5. How It Works - Process Steps */
+.step {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    z-index: 1;
+}
+
+.step-icon {
+    background: var(--white);
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border: 1px solid var(--border-color);
+}
+
+.step h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.step p {
+    font-size: 13px;
+    color: var(--text-gray);
+    line-height: 1.6;
+}
+
+/* 6. Event Cards Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.event-card {
+    background: var(--white);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+}
+
+.event-img-container {
+    position: relative;
+    height: 200px;
+    background-color: #eee;
+    background-size: cover;
+    background-position: center;
+}
+
+.ticket-count {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.event-details {
+    padding: 20px;
+}
+
+.event-details h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    height: 50px; /* Ensures consistent alignment */
+    overflow: hidden;
+}
+
+.text-gray {
+    color: var(--text-gray);
+    font-size: 13px;
+    margin-bottom: 4px;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #F3F4F6;
+}
+
+/* 7. Filter Pills (Browse Page) */
+.filter-pill {
+    background: #F3F4F6;
+    border: 1px solid var(--border-color);
+    padding: 8px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 500;
+    color: #4B5563;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.filter-pill:hover {
+    background: #E5E7EB;
+}
+
+.filter-pill.active {
+    background: var(--primary-orange);
+    color: var(--white);
+    border-color: var(--primary-orange);
+}
+
+/* 8. Ticket Listings (Tickets Page) */
+.ticket-row {
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px 25px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.verified-highlight {
+    border: 1.5px solid var(--primary-orange);
+    background: #FFFAF8;
+    box-shadow: 0 4px 12px rgba(255, 106, 53, 0.08);
+}
+
+.badge-verified {
+    background: #DCFCE7;
+    color: #166534;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.badge-pending {
+    background: #F3F4F6;
+    color: #4B5563;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* 9. Seller Dashboard & Tables */
+.dashboard-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.dashboard-table th, .dashboard-table td {
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 1px solid #F3F4F6;
+}
+
+.status-badge {
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.status-verified { background: #DCFCE7; color: #166534; }
+.status-pending { background: #FEF3C7; color: #92400E; }
+.status-rejected { background: #FEE2E2; color: #991B1B; }
+
+/* 10. Responsive Design */
+@media (max-width: 768px) {
+    .search-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .search-input {
+        width: 100%;
+    }
+    
+    .hero h1 {
+        font-size: 32px;
+    }
+    
+    .ticket-row {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/*In your style.css
+When referencing background images for the event cards, use the assets folder path:
+
+CSS
+
+.event-img-container {
+    background-image: url('../assets/coldplay.jpg'); /* The .. goes up one folder }*/
