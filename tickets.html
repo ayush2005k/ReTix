@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Tickets | ReTix</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="assets/logo.png" alt="ReTix Logo" style="height: 35px; cursor: pointer;" onclick="location.href='index.html'">
+            <span style="font-size: 20px; font-weight: 700; color: #111; vertical-align: middle; margin-left: 8px;">ReTix</span>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="browse.html">Browse Events</a>
+            <a href="upload.html">Sell Tickets</a>
+        </nav>
+        <div class="auth-buttons">
+            <a href="auth.html" style="margin-right: 20px; text-decoration: none; color: #4B5563; font-weight: 500;">Log in</a>
+            <button class="btn-signup" onclick="location.href='auth.html'">Sign up</button>
+        </div>
+    </header>
+
+    <main class="container" style="margin-top: 40px;">
+        <div style="background: white; padding: 30px; border-radius: 16px; border: 1px solid #E5E7EB; margin-bottom: 40px; display: flex; justify-content: space-between; align-items: center;">
+            <div>
+                <span style="background: #FFF0EB; color: #FF6A35; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; text-transform: uppercase;">Concert</span>
+                <h1 style="margin: 10px 0 5px 0; font-size: 28px;">Coldplay: Music Of The Spheres</h1>
+                <p style="color: #6B7280; margin: 0;">📅 Sat, Feb 15, 2026 • 7:00 PM | 📍 DY Patil Stadium, Mumbai</p>
+            </div>
+            <div style="text-align: right;">
+                <p style="color: #6B7280; font-size: 14px; margin-bottom: 5px;">Tickets available</p>
+                <span style="font-size: 24px; font-weight: 700; color: #111;">234</span>
+            </div>
+        </div>
+
+        <h2 style="font-size: 22px; margin-bottom: 20px;">Available Resale Tickets</h2>
+
+        <div id="ticket-listings" style="display: flex; flex-direction: column; gap: 20px;">
+            
+            <div class="ticket-row verified-highlight">
+                <div style="flex: 2;">
+                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+                        <span class="badge-verified">✓ Verified Ticket</span>
+                        <span style="color: #6B7280; font-size: 14px;">Section: <strong>Gold Stand</strong></span>
+                    </div>
+                    <h3 style="margin: 0 0 5px 0; font-size: 18px;">Row A, Seat 12-13</h3>
+                    <p style="color: #6B7280; font-size: 14px; margin: 0;">Seller: Rahul Sharma <span style="color: #FFB800;">★ 4.8</span></p>
+                </div>
+                <div style="flex: 1; text-align: center; border-left: 1px solid #EEE; border-right: 1px solid #EEE;">
+                    <p style="color: #6B7280; font-size: 12px; margin-bottom: 5px;">Price per ticket</p>
+                    <span style="font-size: 22px; font-weight: 700; color: #111;">₹5,500</span>
+                </div>
+                <div style="flex: 1; text-align: right; padding-left: 20px;">
+                    <button class="btn-signup" style="width: 100%;" onclick="alert('Proceeding to Secure Checkout...')">Reserve Ticket</button>
+                    <p style="font-size: 11px; color: #10B981; margin-top: 8px; text-align: center;">Instant Delivery</p>
+                </div>
+            </div>
+
+            <div class="ticket-row">
+                <div style="flex: 2;">
+                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+                        <span class="badge-pending">⌛ Verification Pending</span>
+                        <span style="color: #6B7280; font-size: 14px;">Section: <strong>General Admission</strong></span>
+                    </div>
+                    <h3 style="margin: 0 0 5px 0; font-size: 18px;">GA Floor - Phase 1</h3>
+                    <p style="color: #6B7280; font-size: 14px; margin: 0;">Seller: Amit K. <span style="color: #9CA3AF;">★ New Seller</span></p>
+                </div>
+                <div style="flex: 1; text-align: center; border-left: 1px solid #EEE; border-right: 1px solid #EEE;">
+                    <p style="color: #6B7280; font-size: 12px; margin-bottom: 5px;">Price per ticket</p>
+                    <span style="font-size: 22px; font-weight: 700; color: #111;">₹4,200</span>
+                </div>
+                <div style="flex: 1; text-align: right; padding-left: 20px;">
+                    <button class="btn-disabled" style="width: 100%;" disabled>Reserve Ticket</button>
+                    <p style="font-size: 11px; color: #6B7280; margin-top: 8px; text-align: center;">Available once verified</p>
+                </div>
+            </div>
+
+            <div class="ticket-row verified-highlight">
+                <div style="flex: 2;">
+                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+                        <span class="badge-verified">✓ Verified Ticket</span>
+                        <span style="color: #6B7280; font-size: 14px;">Section: <strong>Platinum Lounge</strong></span>
+                    </div>
+                    <h3 style="margin: 0 0 5px 0; font-size: 18px;">Box B, Seat 04</h3>
+                    <p style="color: #6B7280; font-size: 14px; margin: 0;">Seller: Priya Malhotra <span style="color: #FFB800;">★ 5.0</span></p>
+                </div>
+                <div style="flex: 1; text-align: center; border-left: 1px solid #EEE; border-right: 1px solid #EEE;">
+                    <p style="color: #6B7280; font-size: 12px; margin-bottom: 5px;">Price per ticket</p>
+                    <span style="font-size: 22px; font-weight: 700; color: #111;">₹12,000</span>
+                </div>
+                <div style="flex: 1; text-align: right; padding-left: 20px;">
+                    <button class="btn-signup" style="width: 100%;">Reserve Ticket</button>
+                    <p style="font-size: 11px; color: #10B981; margin-top: 8px; text-align: center;">Instant Delivery</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer style="background: white; border-top: 1px solid #E5E7EB; padding: 60px 8% 30px; margin-top: 100px;">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 40px;">
+            <div style="max-width: 350px;">
+                <img src="assets/logo.png" alt="ReTix" height="30">
+                <p style="color: #6B7280; font-size: 14px; margin-top: 15px;">The trusted marketplace for verified second-hand event tickets.</p>
+            </div>
+            <div style="display: flex; gap: 40px; font-size: 14px;">
+                <a href="index.html" style="color: #6B7280; text-decoration: none;">Home</a>
+                <a href="browse.html" style="color: #6B7280; text-decoration: none;">Browse</a>
+                <a href="upload.html" style="color: #6B7280; text-decoration: none;">Sell</a>
+            </div>
+        </div>
+        <div style="border-top: 1px solid #E5E7EB; padding-top: 20px; color: #9CA3AF; font-size: 12px;">
+            © 2026 ReTix. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/api.js"></script>
+</body>
+</html>
