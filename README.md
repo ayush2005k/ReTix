@@ -42,6 +42,10 @@ This project is currently under active development as part of an internship-focu
 - **Tools:** VS Code, Maven, Postman (API Testing)
 
 ---
+## Live Demo Link
+https://retix1.netlify.app/
+
+---
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/24590b86-d7ff-4f49-9dda-f7cb9775e838" />
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b156837c-02e9-4dc0-954b-8c80583b4db4" />
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/027751c7-0ebb-4a77-8795-d6e13f78b7d9" />
